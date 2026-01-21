@@ -10,7 +10,7 @@ const ProjectsPage: React.FC = () => {
       <div className="mb-20">
         <h1 className="text-5xl font-black mb-4 tracking-tighter">PROJECT ARCHIVE</h1>
         <p className="text-neutral-500 max-w-xl text-lg">
-          Our complete directory of engineering experiments and production-ready tools, tracked chronologically from inception.
+          Our complete index of builds, tracked chronologically from the inception of B9 Labs.
         </p>
       </div>
 
@@ -24,7 +24,7 @@ const ProjectsPage: React.FC = () => {
         <div className="flex-grow">
           <div className="space-y-32">
             {/* Group projects by year */}
-            {['2024', '2023', '2022'].map(year => {
+            {['2026', '2025', '2024', '2023'].map(year => {
               const yearProjects = PROJECTS.filter(p => p.completionYear === year);
               if (yearProjects.length === 0) return null;
 

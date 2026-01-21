@@ -9,7 +9,7 @@ const VscodeVisual: React.FC = () => {
           <span className="w-3 h-3 rounded-full bg-yellow-500" />
           <span className="w-3 h-3 rounded-full bg-green-500" />
         </div>
-        <div className="text-[10px] text-neutral-400 tracking-widest uppercase">B9 Labs — Visual</div>
+        <div className="text-[10px] text-neutral-400 tracking-widest uppercase">B9 Labs</div>
         <div className="w-10" />
       </div>
 
@@ -30,7 +30,7 @@ const VscodeVisual: React.FC = () => {
         <div className="hidden sm:block border-r border-neutral-800 bg-neutral-950/60">
           <div className="px-4 py-3 text-[10px] text-neutral-500 uppercase tracking-widest">Explorer</div>
           <div className="px-4 pb-4 space-y-2 text-xs text-neutral-300">
-            <div className="text-neutral-500">/b9-labs</div>
+            <div className="text-neutral-500">/B9-LABS</div>
             <div className="flex items-center space-x-2">
               <span className="w-1.5 h-1.5 rounded-full bg-purple-500" />
               <span>systems</span>

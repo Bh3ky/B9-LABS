@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { HashRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import HomePage from './pages/HomePage';
@@ -19,7 +19,9 @@ const App: React.FC = () => {
             <Route path="/archive" element={<ArchivePage />} />
           </Routes>
         </main>
-        <Footer />
+        <div className="pt-12">
+          <Footer />
+        </div>
       </div>
     </Router>
   );

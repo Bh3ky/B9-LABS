@@ -7,9 +7,8 @@ const ArchivePage: React.FC = () => {
   return (
     <div className="max-w-7xl mx-auto px-6 py-20 animate-in slide-in-from-bottom-2 duration-700">
       <div className="mb-20">
-        <div className="flex items-center space-x-2 text-blue-500 mb-4">
-          <HardDrive size={16} />
-          <span className="text-xs mono uppercase tracking-widest font-bold">System / Archive / Vault</span>
+        <div className="flex items-center space-x-2 text-purple-500 mb-4">
+          <HardDrive size={30} />
         </div>
         <h1 className="text-6xl font-black mb-6 tracking-tighter">PROJECT VAULT</h1>
         <p className="text-neutral-500 max-w-2xl text-lg leading-relaxed">
@@ -17,7 +16,7 @@ const ArchivePage: React.FC = () => {
         </p>
       </div>
 
-      <div className="bg-neutral-900/20 border border-neutral-800 rounded-2xl overflow-hidden backdrop-blur-sm">
+      <div className="bg-neutral-900/30 border border-neutral-800 rounded-2xl overflow-hidden">
         <div className="grid grid-cols-12 border-b border-neutral-800 bg-neutral-900/50 p-4 text-[10px] mono uppercase text-neutral-500 tracking-widest font-bold">
           <div className="col-span-5 px-4">Repository / Project</div>
           <div className="col-span-2 hidden md:block">Status</div>
@@ -29,11 +28,11 @@ const ArchivePage: React.FC = () => {
           {PROJECTS.map((project) => (
             <div key={project.id} className="grid grid-cols-12 p-6 hover:bg-neutral-800/20 transition-colors group items-center">
               <div className="col-span-12 md:col-span-5 px-4 flex items-center space-x-4">
-                <div className="p-3 bg-neutral-800/50 rounded-lg text-blue-500 group-hover:scale-110 transition-transform">
+                <div className="p-3 bg-neutral-800/50 rounded-lg text-purple-500 group-hover:scale-110 transition-transform">
                   <Folder size={20} fill="currentColor" fillOpacity={0.1} />
                 </div>
                 <div>
-                  <h3 className="text-lg font-bold text-white group-hover:text-blue-400 transition-colors flex items-center">
+                  <h3 className="text-lg font-bold text-white group-hover:text-purple-400 transition-colors flex items-center">
                     {project.title}
                     <span className="ml-3 text-[10px] mono px-2 py-0.5 bg-neutral-800 rounded text-neutral-500 group-hover:text-neutral-300">
                       {project.completionYear}
@@ -46,7 +45,7 @@ const ArchivePage: React.FC = () => {
               <div className="col-span-2 hidden md:flex items-center space-x-2">
                 <span className={`w-2 h-2 rounded-full ${
                   project.metrics?.status === 'active' ? 'bg-green-500 animate-pulse' :
-                  project.metrics?.status === 'stable' ? 'bg-blue-500' :
+                  project.metrics?.status === 'stable' ? 'bg-purple-500' :
                   project.metrics?.status === 'legacy' ? 'bg-neutral-600' : 'bg-yellow-500'
                 }`} />
                 <span className="text-xs mono uppercase text-neutral-400">{project.metrics?.status}</span>
@@ -59,7 +58,7 @@ const ArchivePage: React.FC = () => {
                     {project.metrics?.stars}
                   </div>
                   <div className="flex items-center text-neutral-400">
-                    <Activity size={12} className="mr-1 text-blue-500/50" />
+                    <Activity size={12} className="mr-1 text-purple-500/50" />
                     {project.metrics?.loc}
                   </div>
                 </div>
@@ -94,7 +93,7 @@ const ArchivePage: React.FC = () => {
               <img src={`https://i.pravatar.cc/100?u=${i+10}`} alt="Contributor" className="w-full h-full object-cover" />
             </div>
           ))}
-          <div className="w-10 h-10 rounded-full border-2 border-neutral-950 bg-blue-600 flex items-center justify-center text-[10px] font-bold">+12</div>
+          <div className="w-10 h-10 rounded-full border-2 border-neutral-950 bg-purple-600 flex items-center justify-center text-[10px] font-bold">+12</div>
         </div>
       </div>
     </div>

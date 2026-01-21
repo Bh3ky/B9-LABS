@@ -99,7 +99,7 @@ const Hero: React.FC = () => {
         variants={itemVariants}
         initial="hidden"
         animate="visible"
-        className="mt-12 mx-auto w-full max-w-5xl z-10"
+        className="mt-12 mx-auto w-full max-w-5xl items-center justify-center z-10"
       >
         <VscodeVisual />
       </motion.div>

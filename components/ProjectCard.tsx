@@ -8,7 +8,7 @@ interface ProjectCardProps {
 
 const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
   return (
-    <div className="group relative bg-neutral-900/40 border border-neutral-800 rounded-2xl overflow-hidden hover:border-neutral-700 transition-all duration-500 hover:shadow-2xl hover:shadow-blue-500/5">
+    <div className="group relative bg-neutral-900/40 border border-neutral-800 rounded-2xl overflow-hidden hover:border-neutral-700 transition-all duration-500 hover:shadow-2xl hover:shadow-purple-500/5">
       <div className="aspect-video overflow-hidden">
         <img 
           src={project.image} 
@@ -26,7 +26,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
           ))}
         </div>
 
-        <h3 className="text-2xl font-bold mb-3 group-hover:text-blue-400 transition-colors">
+        <h3 className="text-2xl font-bold mb-3 group-hover:text-purple-400 transition-colors">
           {project.title}
         </h3>
         
@@ -37,7 +37,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
         <div className="grid grid-cols-3 gap-2">
           <a 
             href={project.liveUrl} 
-            className="flex items-center justify-center px-3 py-2 bg-blue-600 hover:bg-blue-700 rounded-lg text-xs font-bold transition-colors"
+            className="flex items-center justify-center px-3 py-2 bg-purple-600 hover:bg-purple-700 rounded-lg text-xs font-bold transition-colors"
           >
             LIVE
           </a>

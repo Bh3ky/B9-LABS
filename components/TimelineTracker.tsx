@@ -23,7 +23,7 @@ const TimelineTracker: React.FC<TimelineTrackerProps> = ({ projects }) => {
             {/* Timeline Dot & Label */}
             <div className="flex flex-col items-center mr-8">
               <div className="w-12 h-12 bg-neutral-950 border border-neutral-800 rounded-full flex items-center justify-center group">
-                <div className="w-3 h-3 bg-blue-600 rounded-full group-hover:scale-150 transition-transform" />
+                <div className="w-3 h-3 bg-purple-600 rounded-full group-hover:scale-150 transition-transform" />
               </div>
               <div className="mt-2 text-[10px] mono text-neutral-500 font-bold tracking-widest uppercase">
                 {project.completionYear}
@@ -32,7 +32,7 @@ const TimelineTracker: React.FC<TimelineTrackerProps> = ({ projects }) => {
 
             {/* Content Mirror (Implicit link via layout) */}
             <div className="flex-1">
-              <span className="text-xs mono text-blue-500/80 mb-1 block uppercase font-medium">
+              <span className="text-xs mono text-neutral-500/80 mb-1 block uppercase font-medium">
                 {new Date(project.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric' })}
               </span>
             </div>
