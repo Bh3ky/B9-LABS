@@ -9,7 +9,7 @@ This plan migrates the current Vite + React app to a fully functional Next.js (R
 ## 2) Current-State Inventory
 - **Routing**: React Router with `HashRouter`.
 - **Entry**: `index.html`, `index.tsx`, `App.tsx`.
-- **Views**: `pages/` directory.
+- **Views**: `app/` directory (App Router).
 - **Components**: `components/` directory.
 - **Data**: `constants.ts`, `types.ts`.
 - **Assets**: Any static assets referenced in code or `index.html`.
@@ -37,9 +37,9 @@ This plan migrates the current Vite + React app to a fully functional Next.js (R
 1. Create `app/layout.tsx` to replace `index.html` boilerplate:
    - Move metadata, fonts, and global wrappers here.
 2. Create route pages:
-   - `app/page.tsx` from `pages/Home`.
-   - `app/projects/page.tsx` from `pages/Projects`.
-   - `app/archive/page.tsx` from `pages/Archive`.
+   - `app/page.tsx` from the Home view.
+   - `app/projects/page.tsx` from the Projects view.
+   - `app/archive/page.tsx` from the Archive view.
 3. Replace `react-router-dom` with App Router navigation (`next/link`).
 4. Remove `HashRouter`-specific logic and any hash-based URLs.
 
