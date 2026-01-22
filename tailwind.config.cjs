@@ -3,9 +3,8 @@ module.exports = {
   content: [
     "./app/**/*.{ts,tsx}",
     "./components/**/*.{ts,tsx}",
-    "./pages/**/*.{ts,tsx}",
-    "./index.tsx",
-    "./App.tsx",
+    "./constants.ts",
+    "./types.ts",
   ],
   theme: {
     extend: {},

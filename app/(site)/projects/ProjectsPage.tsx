@@ -1,8 +1,8 @@
 
 import React from 'react';
-import TimelineTracker from '../components/TimelineTracker';
-import ProjectCard from '../components/ProjectCard';
-import { PROJECTS } from '../constants';
+import TimelineTracker from '../../../components/TimelineTracker';
+import ProjectCard from '../../../components/ProjectCard';
+import { PROJECTS } from '../../../constants';
 
 const ProjectsPage: React.FC = () => {
   return (

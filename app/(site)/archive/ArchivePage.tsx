@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { PROJECTS } from '../constants';
+import { PROJECTS } from '../../../constants';
 import { Folder, Star, Activity, HardDrive, ArrowRight, Github, ExternalLink } from 'lucide-react';
 
 const ArchivePage: React.FC = () => {

@@ -1,9 +1,9 @@
 
 import React from 'react';
-import Hero from '../components/Hero';
-import { PROJECTS } from '../constants';
-import ProjectCard from '../components/ProjectCard';
-import Counter from '../components/Counter';
+import Hero from '../../../components/Hero';
+import { PROJECTS } from '../../../constants';
+import ProjectCard from '../../../components/ProjectCard';
+import Counter from '../../../components/Counter';
 import Link from 'next/link';
 
 const HomePage: React.FC = () => {
