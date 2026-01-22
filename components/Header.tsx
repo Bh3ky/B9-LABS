@@ -1,11 +1,14 @@
+ "use client";
+
 import React, { useState, useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import { NAV_ITEMS } from '../constants';
 
 const Header: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const location = useLocation();
+  const pathname = usePathname();
 
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 20);
@@ -28,7 +31,7 @@ const Header: React.FC = () => {
             } px-8 py-3 gap-12`}
           >
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-1.5 group">
+          <Link href="/" className="flex items-center space-x-1.5 group">
             <div className="w-6 h-6 bg-purple-800 rounded flex items-center justify-center font-bold text-xs group-hover:rotate-12 transition-transform">
               B9
             </div>
@@ -39,7 +42,7 @@ const Header: React.FC = () => {
           <nav className="hidden md:flex items-center space-x-6">
             {NAV_ITEMS.map((item) => {
               const isExternal = item.path.startsWith('http');
-              const isActive = location.pathname === item.path;
+              const isActive = pathname === item.path;
 
               return isExternal ? (
                 <a
@@ -54,7 +57,7 @@ const Header: React.FC = () => {
               ) : (
                 <Link
                   key={item.label}
-                  to={item.path}
+                  href={item.path}
                   className={`text-xs font-medium transition-colors ${
                     isActive ? 'text-purple-500' : 'text-neutral-400 hover:text-white'
                   }`}
@@ -89,7 +92,7 @@ const Header: React.FC = () => {
           <div className="mt-2 md:hidden rounded-2xl border border-neutral-800 bg-neutral-950/90 backdrop-blur-md px-4 py-3 space-y-3">
             {NAV_ITEMS.map((item) => {
               const isExternal = item.path.startsWith('http');
-              const isActive = location.pathname === item.path;
+              const isActive = pathname === item.path;
 
               return isExternal ? (
                 <a
@@ -104,7 +107,7 @@ const Header: React.FC = () => {
               ) : (
                 <Link
                   key={item.label}
-                  to={item.path}
+                  href={item.path}
                   className={`block text-sm font-medium ${
                     isActive ? 'text-purple-500' : 'text-neutral-300 hover:text-white'
                   }`}
@@ -124,5 +127,3 @@ const Header: React.FC = () => {
 };
 
 export default Header;
-
-

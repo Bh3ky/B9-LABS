@@ -15,7 +15,7 @@ The application uses a flat but strictly organized component structure:
 - **ProjectCard**: A self-contained preview module with hover-state logic.
 
 ## 3. Routing Strategy
-We use `react-router-dom` with a `HashRouter`. This ensures the application can be hosted on static platforms (like GitHub Pages) without specialized server configuration for deep-linking.
+We use Next.js App Router with file-based routing under `app/`. Routes are server-first by default, and client components are used when browser APIs or interactivity is required.
 
 ## 4. Real-time Simulation
 The "Real-time stats" are achieved through the `Counter` component. It uses `IntersectionObserver` to detect when the user scrolls to the stats section and then runs a requestAnimationFrame-based timer to animate values from 0 to the target.

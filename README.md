@@ -4,7 +4,7 @@ A sophisticated, high-performance platform for cataloging and showcasing enginee
 
 ## 🚀 Quick Start
 
-This project is a modern React application built with Vite and TypeScript, utilizing an `importmap` in `index.html` for runtime dependency loading from `esm.sh`. It requires a build step for TypeScript transpilation.
+This project is a modern React application built with Next.js App Router and TypeScript.
 
 ### Prerequisites
 - Node.js (version 18 or higher)
@@ -27,13 +27,14 @@ This project is a modern React application built with Vite and TypeScript, utili
    ```bash
    npm run dev
    ```
-   This launches Vite's dev server with hot reloading (typically on `http://localhost:3000`).
+   This launches Next.js with hot reloading (typically on `http://localhost:3000`).
 
 4. **Open the browser:**
    Navigate to the provided local URL (e.g., `http://localhost:3000`).
 
 ## 🛠 Tech Stack
 
+- **Next.js App Router**: Server-first React framework with file-based routing.
 - **React 19**: Modern UI library using the latest features.
 - **Tailwind CSS**: Utility-first styling for high-performance design.
 - **Framer Motion**: Advanced kinetic animations and reveal effects.

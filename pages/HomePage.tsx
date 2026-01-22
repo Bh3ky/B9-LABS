@@ -4,7 +4,7 @@ import Hero from '../components/Hero';
 import { PROJECTS } from '../constants';
 import ProjectCard from '../components/ProjectCard';
 import Counter from '../components/Counter';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 
 const HomePage: React.FC = () => {
   const featuredProjects = PROJECTS.slice(0, 3);
@@ -21,7 +21,7 @@ const HomePage: React.FC = () => {
               A collection of builds focused on resilient systems architecture and fluid interaction. From distributed backends to precision-engineered ui interfaces.
             </p>
           </div>
-          <Link to="/projects" className="text-gray-500 font-bold hover:text-purple-400 transition-colors inline-flex items-center group">
+          <Link href="/projects" className="text-gray-500 font-bold hover:text-purple-400 transition-colors inline-flex items-center group">
             All Repositories
             <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />

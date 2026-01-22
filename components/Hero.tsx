@@ -1,5 +1,7 @@
+ "use client";
+
 import React from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import { motion, Variants } from 'framer-motion';
 import VscodeVisual from './VscodeVisual';
 
@@ -74,7 +76,7 @@ const Hero: React.FC = () => {
           className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-4"
         >
           <Link
-            to="/projects"
+            href="/projects"
             className="
               w-full sm:w-auto
               px-10 py-4
@@ -109,4 +111,3 @@ const Hero: React.FC = () => {
 };
 
 export default Hero;
-
